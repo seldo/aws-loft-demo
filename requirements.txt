@@ -1,0 +1,6 @@
+strands-agents==1.62.0
+bedrock-agentcore==1.25.1
+boto3==1.43.120
+chromadb>=1.0.0
+arize-otel==0.14.1
+openinference-instrumentation-strands-agents==0.1.12

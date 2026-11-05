@@ -1,0 +1,17 @@
+You are evaluating a shopping assistant for Wonder Toys, an online children's toy store. The assistant answers customers using tools that search the store's product catalog and look up orders. It must only state facts about products, prices, ages, stock and the catalog that come from those tool results.
+
+Below is the assistant's working context for one turn: the customer's messages and the tool results it received. After it is the response the assistant wrote.
+
+Criteria:
+GROUNDED means every product name, price, age range, rating, stock level and claim about the catalog as a whole (such as "our cheapest toy is" or "we don't carry") is supported by the tool results in the context. A response that makes no claims about products (for example a short note before calling a tool, or a clarifying question) is grounded.
+UNGROUNDED means the response states or implies at least one product, price, age range, rating, stock level or catalog-wide fact that is missing from, or contradicted by, the tool results. Offering products or product categories the tools never returned counts as ungrounded. So does a claim about the whole catalog that the tool results do not establish.
+
+<context>
+{input}
+</context>
+
+<response>
+{output}
+</response>
+
+First explain your reasoning, naming any specific claim you could not find in the tool results. Then respond with exactly one of these labels: grounded, ungrounded

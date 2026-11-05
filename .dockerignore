@@ -1,0 +1,4 @@
+.venv/
+chroma-index/
+**/__pycache__/
+*.sh

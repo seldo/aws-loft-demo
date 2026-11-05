@@ -1,0 +1,38 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "InvokeDemoModels",
+      "Effect": "Allow",
+      "Action": [
+        "bedrock:InvokeModel"
+      ],
+      "Resource": [
+        "arn:aws:bedrock:us-west-2:ACCOUNT_ID:inference-profile/us.anthropic.claude-haiku-4-5-*",
+        "arn:aws:bedrock:us-west-2:ACCOUNT_ID:inference-profile/us.anthropic.claude-sonnet-4-5-*",
+        "arn:aws:bedrock:us-west-2:ACCOUNT_ID:inference-profile/us.anthropic.claude-haiku-5-5",
+        "arn:aws:bedrock:us-west-2:ACCOUNT_ID:inference-profile/us.anthropic.claude-sonnet-5-5",
+        "arn:aws:bedrock:us-west-2:ACCOUNT_ID:inference-profile/us.amazon.nova-2-lite-v1:0",
+        "arn:aws:bedrock:*::foundation-model/anthropic.claude-haiku-4-5-*",
+        "arn:aws:bedrock:*::foundation-model/anthropic.claude-sonnet-4-5-*",
+        "arn:aws:bedrock:*::foundation-model/anthropic.claude-haiku-5-5",
+        "arn:aws:bedrock:*::foundation-model/anthropic.claude-sonnet-5-5",
+        "arn:aws:bedrock:*::foundation-model/amazon.nova-2-lite-v1:0"
+      ]
+    },
+    {
+      "Sid": "BedrockApplyGuardrail",
+      "Effect": "Allow",
+      "Action": [
+        "bedrock:ApplyGuardrail"
+      ],
+      "Resource": "arn:aws:bedrock:*:*:guardrail/*"
+    },
+    {
+      "Sid": "CheckMarketplaceSubscription",
+      "Effect": "Allow",
+      "Action": "aws-marketplace:ViewSubscriptions",
+      "Resource": "*"
+    }
+  ]
+}

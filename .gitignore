@@ -1,0 +1,9 @@
+.venv/
+chroma-index/
+__pycache__/
+*.pyc
+.env*
+
+# Contain the Arize external ID for the ArizeBedrockInvoke role
+infra/arize-external-id.txt
+infra/arize-trust-policy-with-external-id.json
